@@ -321,14 +321,14 @@ html,body{
 }
 
 #page7 video{
-    width: 80%;
+    width: 90%;
     object-fit: cover;
     border-radius: 2%;
 }
 
 
 #page7 img{
-    width: 80%;
+    width: 90%;
     object-fit: cover;
     border-radius: 2%;
     position: absolute;
@@ -429,14 +429,14 @@ html,body{
 }
 
 #page10 video{
-    width: 80%;
+    width: 90%;
     object-fit: cover;
     
 }
 
 
 #page10 img{
-    width: 80%;
+    width: 90%;
     object-fit: cover;
     border-radius: 2%;
     position: absolute;
@@ -660,7 +660,7 @@ html,body{
     justify-content: center;
     background-color: #fff;
 }
-#page28 img{
+#page28 video{
     height: 90vh;
     width: 90vw;
 }
@@ -747,43 +747,41 @@ html,body{
 }
 #page32{
     position: relative;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
-    background-color: #000;
-    display: flex;
-    color: #fff;
-    align-items: center;
-    z-index: 9;
-    
-    flex-direction: column;
+    top: 0%;
+    /* background-color: #000; */
 }
-#page32 img{
-    height: 70vh;
-    width: 70vw;
+#page32 canvas1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
-#down{
-    position: absolute;
+#page33{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
     bottom: 0%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    z-index: 9;
     color: #fff;
     /* background-color: red; */
     border: none;
     cursor: pointer;
- 
-    
 }
-#down h1{
+
+#page33 h1{
     width: 60vw;
     font-size: 3.5vw;
     margin-bottom: 4%;
     font-weight: 800;
 }
-#down p{
+#page33 p{
     width: 55vw;
     font-size: 2vw;
     font-weight: 400;
@@ -791,21 +789,22 @@ html,body{
     /* text-align: center; */
   
 }
-#down p span{
+#page33 p span{
     color: #F5F5F7;
 }
-#page33{
+#page34{
     position: relative;
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    /* background-color: #000; */
+    background-color: #000;
 }
-#page33 img{
+#page34 video{
+    /* background-color: #000; */
     height: 100vh;
     width: 100vw;
 }
-#page33-buttom{
+#page34-buttom{
     height: 70vh;
     width: 25vw;
     position: absolute;
@@ -819,78 +818,27 @@ html,body{
     /* justify-content: center; */
     flex-direction: column;
     color: #fff;
-    /* background-color: red; */
+    /* background-color:black; */
     border: none;
     cursor: pointer;
     gap: 5%;
  
 }
-#page33-buttom h1{
+#page34-buttom h1{
     font-size: 2.5vw;
 }
-#page33-buttom p{
+#page34-buttom p{
     font-size: 1.5vw;
     color:  gray;
     /* line-height: 1.2; */
 }
-#page33-buttom p span{
-    color: #F5F5F7;
-}
-#page34{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: #000;
-    display: flex;
-    color: #fff;
-    align-items: center;
-    z-index: 9;
-    
-    flex-direction: column;
-}
-#page34 img{
-    height: 60vh;
-    width: 60vw;
-}
-#page34-buttom{
-    position: absolute;
-    bottom: 0%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    color: #fff;
-    /* background-color: red; */
-    border: none;
-    cursor: pointer;
- 
-    
-}
-#page34-buttom h1{
-    width: 60vw;
-    font-size: 3.5vw;
-    margin-bottom: 4%;
-    font-weight: 800;
-}
-#page34-buttom p{
-    width: 55vw;
-    font-size: 2vw;
-    font-weight: 400;
-    color: grey;
-    /* text-align: center; */
-  
-}
 #page34-buttom p span{
     color: #F5F5F7;
 }
-
 #page35{
     position: relative;
     height: 100vh;
     width: 100vw;
-    
     background-color: #000;
     display: flex;
     color: #fff;
@@ -900,7 +848,6 @@ html,body{
     flex-direction: column;
 }
 #page35 img{
-    margin-top: 5%;
     height: 60vh;
     width: 60vw;
 }
@@ -922,8 +869,8 @@ html,body{
 }
 #page35-buttom h1{
     width: 60vw;
-    font-size: 3vw;
-    margin-bottom: 3%;
+    font-size: 3.5vw;
+    margin-bottom: 4%;
     font-weight: 800;
 }
 #page35-buttom p{
@@ -942,16 +889,69 @@ html,body{
     position: relative;
     height: 100vh;
     width: 100vw;
+    
     background-color: #000;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    z-index: 9;
+    
+    flex-direction: column;
 }
 #page36 img{
+    margin-top: 5%;
+    height: 60vh;
+    width: 60vw;
+}
+#page36-buttom{
+    position: absolute;
+    bottom: 2%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    color: #fff;
+    /* background-color: red; */
+    border: none;
+    cursor: pointer;
+ 
+    
+}
+#page36-buttom h1{
+    width: 60vw;
+    font-size: 3vw;
+    margin-bottom: 3%;
+    font-weight: 800;
+}
+#page36-buttom p{
+    width: 55vw;
+    font-size: 2vw;
+    font-weight: 400;
+    color: grey;
+    /* text-align: center; */
+  
+}
+#page36-buttom p span{
+    color: #F5F5F7;
+}
+
+#page37{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+#page37 img{
     margin-top: 10%;
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+     /* background-color: #000; */
 }
 
-#page37{
+#page38{
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -964,21 +964,21 @@ html,body{
     text-align: center;
     gap: 2%;
 }
-#page37 h1{
+#page38 h1{
     width: 30vw;
     font-size: 2.5vw;
     margin-bottom: 2vw;
 }
-#page37 p{
+#page38 p{
     font-size: 1.5vw;
     line-height: 1.5;
     width: 50vw;
     color: gray;
 }
-#page37 p span{
+#page38 p span{
     color: #fff
 }
-#page37 button{
+#page38 button{
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -990,21 +990,9 @@ html,body{
     border-radius: 40vh;
     cursor: pointer;
 }
-#page37 button:hover{
+#page38 button:hover{
     background-color: #4d4d4d;
     color: #000;
 }
 
 
-#page38{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    top: 0%;
-    /* background-color: #000; */
-}
-#page38 canvas{
-    position: relative;
-    width: 100vw;
-    height: 100vw;
-}

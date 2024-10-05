@@ -443,92 +443,136 @@ ScrollTrigger.create({
 }
 canvas();
 
+function canvas1() {
+  // Select the canvas element with the correct selector
+  const canvas = document.querySelector("#canvas1");
+  
+  // Check if the canvas element exists
+  if (!canvas) {
+    console.error("Canvas element not found!");
+    return;
+  }
 
-function canvas1(){
-  const canvas = document.querySelector("#page38 canvas");
-const context = canvas.getContext("2d");
+  const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  // Set canvas size to window dimensions
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
+  // Adjust canvas size on window resize
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
 
-window.addEventListener("resize", function () {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-render();
-});
+  // Function to retrieve image paths
+  function files(index) {
+    const data = `
+    ./Vision00001.png
+    ./Vision00002.png
+    ./Vision00003.png
+    ./Vision00004.png
+    ./Vision00005.png
+    ./Vision00006.png
+    ./Vision00007.png
+    ./Vision00008.png
+    ./Vision00009.png
+    ./Vision00010.png
+    ./Vision00011.png
+    ./Vision00012.png
+    ./Vision00013.png
+    ./Vision00014.png
+    ./Vision00015.png
+    ./Vision00016.png
+    ./Vision00017.png
+    ./Vision00018.png
+    ./Vision00019.png
+    ./Vision00020.png
+    ./Vision00021.png
+    ./Vision00022.png
+    ./Vision00023.png
+    ./Vision00024.png
+    ./Vision00025.png
+    `;
+    return data.trim().split("\n")[index];
+  }
 
-function files(index) {
-var data = Vision00001.png`;
-return data.split("\n")[index];
+  const frameCount = 25;
+  const images = [];
+  const imageSeq = {
+    frame: 0, // Start frame from 0
+  };
+
+  // Preload all the images
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+
+  // GSAP animation for scroll-based frame change
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: "none",
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: "#page32", // Changed from #page18 to #page38
+      start: "top top",
+      end: "80% top",
+      scroller: "#main",
+    },
+    onUpdate: render,
+  });
+
+  // Render the first frame once the second image is loaded
+  images[1].onload = render;
+
+  // Function to render the current frame
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  // Function to scale the image properly on the canvas
+  function scaleImage(img, ctx) {
+    const canvas = ctx.canvas;
+    const hRatio = canvas.width / img.width;
+    const vRatio = canvas.height / img.height;
+    const ratio = Math.max(hRatio, vRatio);
+    const centerShift_x = (canvas.width - img.width * ratio) / 2;
+    const centerShift_y = (canvas.height - img.height * ratio) / 2;
+
+    // Clear the canvas before rendering the new image
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the image with the correct scale
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+
+  // Pin the canvas on the page using ScrollTrigger
+  ScrollTrigger.create({
+    trigger: "#page32", // Changed from #page18 to #page38
+    pin: true,
+    scroller: "#main",
+    start: "top top",
+    end: "80% top",
+  });
 }
 
-const frameCount = 25;
-
-const images = [];
-const imageSeq = {
-frame: 1,
-};
-
-for (let i = 0; i < frameCount; i++) {
-const img = new Image();
-img.src = files(i);
-images.push(img);
-}
-
-gsap.to(imageSeq, {
-frame: frameCount - 1,
-snap: "frame",
-ease: `none`,
-scrollTrigger: {
-  scrub: 0.15,
-  trigger: `#page38`,
-  //   set start end according to preference
-  start: `top top`,
-  end: `80% top`,
-  scroller: `#main`,
-},
-onUpdate: render,
-});
-
-images[1].onload = render;
-
-function render() {
-scaleImage(images[imageSeq.frame], context);
-}
-
-function scaleImage(img, ctx) {
-var canvas = ctx.canvas;
-var hRatio = canvas.width / img.width;
-var vRatio = canvas.height / img.height;
-var ratio = Math.max(hRatio, vRatio);
-var centerShift_x = (canvas.width - img.width * ratio) / 2;
-var centerShift_y = (canvas.height - img.height * ratio) / 2;
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.drawImage(
-  img,
-  0,
-  0,
-  img.width,
-  img.height,
-  centerShift_x,
-  centerShift_y,
-  img.width * ratio,
-  img.height * ratio
-);
-}
-ScrollTrigger.create({
-
-trigger: "#page38",
-// pin: true,
-// markers:true,
-scroller: `#main`,
-//   set start end according to preference
-start: `top top`,
-end: `80% top`,
-});
-}
+// Initialize the canvas animation
 canvas1();
+
 
 
 
