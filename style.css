@@ -452,7 +452,253 @@ html,body{
     bottom: 10%;
     cursor: pointer;
 }
+#page11{
+    display: flex;
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+     background-color: #fff;
+    
+}
+#page11-left{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
 
+#page11-left h1{
+    font-size: 2.7vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    
+}
+#page11-right{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 50%;
+    padding-left: 5vw;
+   
+}
+#page11-right h3{
+    font-size: 1.7vw;
+    width: 90%;
+    color: #484848d7;
+}
+#page11-right button{
+    padding: 3vh 4vw;
+    border: none;
+    background-color: #ff823d;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    margin-top: 2.7vw;
+    cursor: pointer;
+}
+#page11-right button:hover{
+    background-color: #ff5927;
+    color: #000;
+}
+#page12{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    line-height: 1;
+    background-color: #F5F5F7;
+    
+}
+#page12 h5{
+    font-size: 2vw;
+    color: #000;
+   
+    text-align: center;
+    margin-top: 5%;
+}
+#page12 h1{
+    font-size: 7vw;
+    color: #000;
+    text-align: center;
+}
+#page13 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page13 video{
+    width: 90%;
+    object-fit: cover;
+    
+}
+
+
+#page13 img{
+    width: 90%;
+    object-fit: cover;
+    border-radius: 2%;
+    position: absolute;
+}
+#page13 .btn:active{
+    scale: 1.1;
+}
+#page13 .btn {
+    position: absolute;
+    z-index: 99;
+    font-size: 2vw;
+    color: #ff5927;
+    bottom: 10%;
+    cursor: pointer;
+}
+#page14{
+    display: flex;
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+     background-color: #fff;
+    
+}
+#page14-left{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#page14-left h1{
+    font-size: 2.5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+}
+#page14-right{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-left: 5vw;
+   
+}
+#page14-right h3{
+    font-size: 1.7vw;
+    width: 90%;
+    color: #484848d7;
+}
+#page14-right button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff823d;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    margin-top: 1.5vw;
+    cursor: pointer;
+}
+#page14-right button:hover{
+    background-color: #ff5927;
+    color: #000;
+}
+#page15{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    line-height: 1;
+    background-color: #F5F5F7;
+    
+}
+#page15 h5{
+    font-size: 1.7vw;
+    color: #000;
+   
+    text-align: center;
+    margin-top: 5%;
+}
+#page15 h1{
+    font-size: 7vw;
+    color: #000;
+    text-align: center;
+}
+#page16 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page16 video{
+    width: 90%;
+    object-fit: cover;
+}
+#page16-centre { position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 2.5vw;
+        color: #fff;
+     }
+
+ #page17{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 60vh;
+        width: 100vw;
+        line-height: 1;
+        background-color: #efefef
+    }
+#page17 h5{
+        font-size: 2vw;
+        color: #000;
+       
+        text-align: center;
+        margin-top: 5%;
+    }
+#page17 h1{
+        font-size: 6vw;
+        color: #000;
+        text-align: center;
+    }
+#page18 {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+    }
+    
+#page18 video{
+    
+        width: 80%;
+        object-fit: cover;
+        border-radius: 2%;
+        
+    }
 #page19{
     display: flex;
     align-items: center;

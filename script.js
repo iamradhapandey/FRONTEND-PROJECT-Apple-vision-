@@ -156,6 +156,42 @@ btnplay1.addEventListener("click", function() {
 });
 
 
+var video2 = document.querySelector("#page12 video");
+var img2 = document.querySelector("#page12 img");
+var btnplay2 = document.querySelector(".btn-play2");
+
+
+btnplay2.addEventListener("click", function() {
+  if (video2.paused){
+    video2.play();
+   btnplay2.innerHTML = "<i class='ri-pause-circle-line'></i>";
+   img2.style.display = "none";
+
+  }
+  else{
+    video2.pause();
+    btnplay2.innerHTML = "<i class='ri-play-circle-line'></i>";
+    img2.style.display = "block";
+  }
+});
+
+
+var tl3 = gsap.timeline({
+  scrollTrigger:{
+      trigger:`#page16`,
+      start:`top top`,
+      scrub:1,
+      scroller:`#main`,
+      pin:true
+  }
+})
+
+
+tl3.to("#page16-centre",{
+  top:`-50%`
+})
+
+
 
 function canvas(){
     const canvas = document.querySelector("#page20>canvas");
