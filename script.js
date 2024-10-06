@@ -156,8 +156,8 @@ btnplay1.addEventListener("click", function() {
 });
 
 
-var video2 = document.querySelector("#page12 video");
-var img2 = document.querySelector("#page12 img");
+var video2 = document.querySelector("#page13 video");
+var img2 = document.querySelector("#page13 img");
 var btnplay2 = document.querySelector(".btn-play2");
 
 
