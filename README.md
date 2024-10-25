@@ -49,6 +49,7 @@ To run this project locally, follow these steps:
 1. **Clone this repository**:
    ```bash
 git clone https://github.com/iamradhapandey/FRONTEND-PROJECT-Apple-vision-.git
+```
 
 
 2. **Navigate to the project directory**:
