@@ -48,12 +48,12 @@ To run this project locally, follow these steps:
 
 1. **Clone this repository**:
    ```bash
-https://github.com/iamradhapandey/FRONTEND-PROJECT-Apple-vision-.git
-   ```
+git clone https://github.com/iamradhapandey/FRONTEND-PROJECT-Apple-vision-.git
+
 
 2. **Navigate to the project directory**:
    ```bash
-   cd apple-vision-website
+   cd apple-vision-website 
    ```
 
 3. Open `index.html` in your browser to view the website.
