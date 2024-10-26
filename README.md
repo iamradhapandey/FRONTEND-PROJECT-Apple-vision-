@@ -42,23 +42,6 @@ apple-vision-website/
 └── README.md           # Project README file
 ```
 
-## 🖥️ Installation
-
-To run this project locally, follow these steps:
-
-1. **Clone this repository**:
-   ```bash
-git clone https://github.com/iamradhapandey/FRONTEND-PROJECT-Apple-vision-.git
-```
-
-
-2. **Navigate to the project directory**:
-   ```bash
-   cd apple-vision-website 
-   ```
-
-3. Open `index.html` in your browser to view the website.
-
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to submit a pull request or open an issue if you find bugs or want to add new features.
